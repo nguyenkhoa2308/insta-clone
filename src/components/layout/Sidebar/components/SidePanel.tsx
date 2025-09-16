@@ -3,10 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import Avatar from "../../ui/Avatar";
+import Avatar from "~/components/ui/Avatar";
 import { currentUser, posts, users } from "~/lib/data";
 import { cn, timeAgo } from "~/lib/utils";
-import { PanelType } from "./menuItems";
+import { PanelType } from "~/components/layout/Sidebar/types";
 
 type PanelBaseProps = {
   onClose: () => void;
@@ -198,5 +198,3 @@ function PanelHeader({ title, onClose }: PanelHeaderProps) {
     </div>
   );
 }
-
-

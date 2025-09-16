@@ -3,15 +3,19 @@
 import { useEffect, useState } from "react";
 import type { MouseEventHandler } from "react";
 import { usePathname } from "next/navigation";
-import InstagramIcon from "../icons/InstagramIcon";
-import InstagramLogo from "../icons/InstagramLogo";
-import NavLink from "./NavLink";
-import { cn } from "~/lib/utils";
-import CreatePostDialog from "./sidebar/CreatePostDialog";
-import SidePanel from "./sidebar/SidePanel";
-import { menuItems, PanelType } from "./sidebar/menuItems";
 
-type ActiveItemId = string | null;
+import { InstagramIcon } from "../../icons";
+import InstagramLogo from "../../icons/InstagramLogo";
+
+import { menuItems } from "./constants/menuItems";
+import { ActiveItemId, PanelType } from "./types";
+import { cn } from "~/lib/utils";
+
+import NavLink from "./components/NavLink";
+import CreatePostDialog from "./components/CreatePostDialog";
+import SidePanel from "./components/SidePanel";
+
+
 
 export default function Sidebar() {
   const pathname = usePathname();

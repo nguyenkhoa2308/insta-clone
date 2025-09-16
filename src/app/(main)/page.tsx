@@ -1,6 +1,6 @@
 import { posts } from "~/lib/data";
-import StoryBar from "~/components/feed/StoryBar";
-import PostCard from "~/components/feed/PostCard";
+import StoryBar from "~/app/(main)/components/feed/StoryBar";
+import PostCard from "~/app/(main)/components/feed/PostCard";
 
 export default function Home() {
   return (

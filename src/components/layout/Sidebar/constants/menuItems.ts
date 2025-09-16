@@ -1,5 +1,4 @@
-﻿import { JSX } from "react";
-import {
+﻿import {
   CreateIcon,
   ExploreIcon,
   HomeIcon,
@@ -7,29 +6,8 @@ import {
   NotificationsIcon,
   ReelsIcon,
   SearchIcon,
-} from "../../icons";
-
-export type PanelType = "search" | "notifications";
-
-type IconComponent = (props: { className?: string; filled?: boolean }) => JSX.Element;
-
-export type MenuItem =
-  | {
-      id: string;
-      label: string;
-      icon: IconComponent;
-      type: "link";
-      href: string;
-      exact?: boolean;
-    }
-  | {
-      id: string;
-      label: string;
-      icon: IconComponent;
-      type: "panel";
-      panel: PanelType;
-    }
-  | { id: string; label: string; icon: IconComponent; type: "dialog" };
+} from "../../../icons";
+import { MenuItem } from "../types";
 
 export const menuItems: MenuItem[] = [
   {
